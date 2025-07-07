@@ -55,7 +55,7 @@ export default class AuthService {
     refreshToken: string;
     user: UserResponse;
   }> => {
-    const { name, email, password, role = Role.GUEST } = userData;
+    const { name, email, password, role = Role.PATIENT } = userData;
 
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
