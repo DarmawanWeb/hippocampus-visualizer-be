@@ -53,10 +53,10 @@ jobs:
               cp .env dist/.env
 
               echo "🚀 Running or restarting app with PM2"
-              if pm2 describe patrol-be > /dev/null; then
-                pm2 restart patrol-be --update-env
+              if pm2 describe hippocampus-visualizer-be > /dev/null; then
+                pm2 hippocampus-visualizer-be --update-env
               else
-                pm2 start pnpm --name "patrol-be" -- start
+                pm2 start pnpm --name "hippocampus-visualizer-be" -- start
               fi
 
               pm2 save
